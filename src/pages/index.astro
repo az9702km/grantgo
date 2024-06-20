@@ -25,12 +25,12 @@ import CourseCard from "../components/CourseCard.astro";
 
 <Layout title="Welcome to Astro.">
   <main>
-    <div class="container">
+    <div class="container px-4 md:px-0">
       <section class="pb-32 pt-10">
         <h1 class="text-primary text-5xl leading-normal font-semibold mb-6">
           Our courses
         </h1>
-        <div class="flex gap-x-4 mb-6">
+        <div class="flex flex-wrap gap-4 mb-6">
           <select
             name=""
             id=""
@@ -63,7 +63,7 @@ import CourseCard from "../components/CourseCard.astro";
           </select>
         </div>
         <div class="grid grid-cols-12 gap-6">
-          <div class="col-span-4">
+          <div class="md:col-span-4 col-span-12">
             <CourseCard
               title="Fundamentals of scholarship application writing"
               grade="Bachelor"
@@ -73,7 +73,7 @@ import CourseCard from "../components/CourseCard.astro";
               students="215"
             />
           </div>
-          <div class="col-span-4">
+          <div class="md:col-span-4 col-span-12">
             <CourseCard
               title="Global scholarship opportunities for higher education"
               grade="Masters"
@@ -83,7 +83,7 @@ import CourseCard from "../components/CourseCard.astro";
               students="215"
             />
           </div>
-          <div class="col-span-4">
+          <div class="md:col-span-4 col-span-12">
             <CourseCard
               title="Navigating merit-based and need-based scholarships"
               grade="Bachelor"
@@ -93,7 +93,7 @@ import CourseCard from "../components/CourseCard.astro";
               students="156"
             />
           </div>
-          <div class="col-span-4">
+          <div class="md:col-span-4 col-span-12">
             <CourseCard
               title="Developing a winning scholarship essay"
               grade="Bachelor"
@@ -103,7 +103,7 @@ import CourseCard from "../components/CourseCard.astro";
               students="215"
             />
           </div>
-          <div class="col-span-4">
+          <div class="md:col-span-4 col-span-12">
             <CourseCard
               title="Maximizing financial aid and scholarship packages"
               grade="Masters"
@@ -113,7 +113,7 @@ import CourseCard from "../components/CourseCard.astro";
               students="215"
             />
           </div>
-          <div class="col-span-4">
+          <div class="md:col-span-4 col-span-12">
             <CourseCard
               title="Building a strong scholarship application portfolio"
               grade="Bachelor"
