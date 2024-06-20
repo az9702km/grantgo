@@ -1,0 +1,128 @@
+---
+import Layout from "../layouts/Layout.astro";
+import courseImg from "./src/assets/imgs/courses/course.jpg";
+import vito from "./src/assets/imgs/courses/vito.png";
+import shi from "./src/assets/imgs/courses/shi.png";
+import shep from "./src/assets/imgs/courses/shep.png";
+import teeth from "./src/assets/imgs/courses/teeth.png";
+import update from "./src/assets/imgs/courses/update.png";
+import us from "./src/assets/imgs/countries/us.png";
+import gb from "./src/assets/imgs/countries/gb.png";
+import de from "./src/assets/imgs/countries/de.png";
+import sg from "./src/assets/imgs/countries/sg.png";
+import es from "./src/assets/imgs/countries/es.png";
+
+import guy1 from "./src/assets/imgs/avatar/guy-1.png";
+import guy2 from "./src/assets/imgs/avatar/guy-2.png";
+import guy3 from "./src/assets/imgs/avatar/guy-3.png";
+import girl1 from "./src/assets/imgs/avatar/girl-1.png";
+import girl2 from "./src/assets/imgs/avatar/girl-2.png";
+import girl3 from "./src/assets/imgs/avatar/girl-3.png";
+import CourseCard from "../components/CourseCard.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="container">
+      <section class="pb-32 pt-10">
+        <h1 class="text-primary text-5xl leading-normal font-semibold mb-6">
+          Our courses
+        </h1>
+        <div class="flex gap-x-4 mb-6">
+          <select
+            name=""
+            id=""
+            class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
+            <option value="">Country</option>
+            <option value="">Some option2 vfds</option>
+            <option value="">Some option</option>
+            <option value="">Some option</option>
+            <option value="">Some option </option>
+          </select>
+          <select
+            name=""
+            id=""
+            class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
+            <option value="">Degree</option>
+            <option value="">Some option2 vfds</option>
+            <option value="">Some option</option>
+            <option value="">Some option</option>
+            <option value="">Some option </option>
+          </select>
+          <select
+            name=""
+            id=""
+            class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
+            <option value="">Program</option>
+            <option value="">Some option2 vfds</option>
+            <option value="">Some option</option>
+            <option value="">Some option</option>
+            <option value="">Some option </option>
+          </select>
+        </div>
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-4">
+            <CourseCard
+              title="Fundamentals of scholarship application writing"
+              grade="Bachelor"
+              countries={[us, de, sg, es]}
+              author={{ name: "Alexander James", img: guy1 }}
+              img={courseImg}
+              students="215"
+            />
+          </div>
+          <div class="col-span-4">
+            <CourseCard
+              title="Global scholarship opportunities for higher education"
+              grade="Masters"
+              countries={[us, gb]}
+              author={{ name: "Victoria Harris", img: girl1 }}
+              img={vito}
+              students="215"
+            />
+          </div>
+          <div class="col-span-4">
+            <CourseCard
+              title="Navigating merit-based and need-based scholarships"
+              grade="Bachelor"
+              countries={[us, gb]}
+              author={{ name: "Michael Scott", img: guy2 }}
+              img={shi}
+              students="156"
+            />
+          </div>
+          <div class="col-span-4">
+            <CourseCard
+              title="Developing a winning scholarship essay"
+              grade="Bachelor"
+              countries={[us, de, sg, es]}
+              author={{ name: "David Miller", img: guy3 }}
+              img={shep}
+              students="215"
+            />
+          </div>
+          <div class="col-span-4">
+            <CourseCard
+              title="Maximizing financial aid and scholarship packages"
+              grade="Masters"
+              countries={[us, gb]}
+              author={{ name: "Anne Wilson", img: girl2 }}
+              img={teeth}
+              students="215"
+            />
+          </div>
+          <div class="col-span-4">
+            <CourseCard
+              title="Building a strong scholarship application portfolio"
+              grade="Bachelor"
+              countries={[us, es]}
+              author={{ name: "Jane Anderson", img: girl3 }}
+              img={update}
+              students="156"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>
