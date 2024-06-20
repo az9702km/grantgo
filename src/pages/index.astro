@@ -1,23 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import courseImg from "./src/assets/imgs/courses/course.jpg";
-import vito from "./src/assets/imgs/courses/vito.png";
-import shi from "./src/assets/imgs/courses/shi.png";
-import shep from "./src/assets/imgs/courses/shep.png";
-import teeth from "./src/assets/imgs/courses/teeth.png";
-import update from "./src/assets/imgs/courses/update.png";
-import us from "./src/assets/imgs/countries/us.png";
-import gb from "./src/assets/imgs/countries/gb.png";
-import de from "./src/assets/imgs/countries/de.png";
-import sg from "./src/assets/imgs/countries/sg.png";
-import es from "./src/assets/imgs/countries/es.png";
 
-import guy1 from "./src/assets/imgs/avatar/guy-1.png";
-import guy2 from "./src/assets/imgs/avatar/guy-2.png";
-import guy3 from "./src/assets/imgs/avatar/guy-3.png";
-import girl1 from "./src/assets/imgs/avatar/girl-1.png";
-import girl2 from "./src/assets/imgs/avatar/girl-2.png";
-import girl3 from "./src/assets/imgs/avatar/girl-3.png";
+import courseImg from "../assets/imgs/courses/course.jpg";
+import shiImg from "../assets/imgs/courses/shi.jpg";
+import shepImg from "../assets/imgs/courses/shep.jpg";
+import teethImg from "../assets/imgs/courses/teeth.jpg";
+import updateImg from "../assets/imgs/courses/update.jpg";
+import vitoImg from "../assets/imgs/courses/vito.jpg";
+
+import us from "../assets/imgs/countries/us.png";
+import gb from "../assets/imgs/countries/gb.png";
+import de from "../assets/imgs/countries/de.png";
+import sg from "../assets/imgs/countries/sg.png";
+import es from "../assets/imgs/countries/es.png";
+
+import guy1 from "../assets/imgs/avatar/guy-1.png";
+import guy2 from "../assets/imgs/avatar/guy-2.png";
+import guy3 from "../assets/imgs/avatar/guy-3.png";
+import girl1 from "../assets/imgs/avatar/girl-1.png";
+import girl2 from "../assets/imgs/avatar/girl-2.png";
+import girl3 from "../assets/imgs/avatar/girl-3.png";
 import CourseCard from "../components/CourseCard.astro";
 ---
 
@@ -77,7 +79,7 @@ import CourseCard from "../components/CourseCard.astro";
               grade="Masters"
               countries={[us, gb]}
               author={{ name: "Victoria Harris", img: girl1 }}
-              img={vito}
+              img={vitoImg}
               students="215"
             />
           </div>
@@ -87,7 +89,7 @@ import CourseCard from "../components/CourseCard.astro";
               grade="Bachelor"
               countries={[us, gb]}
               author={{ name: "Michael Scott", img: guy2 }}
-              img={shi}
+              img={shiImg}
               students="156"
             />
           </div>
@@ -97,7 +99,7 @@ import CourseCard from "../components/CourseCard.astro";
               grade="Bachelor"
               countries={[us, de, sg, es]}
               author={{ name: "David Miller", img: guy3 }}
-              img={shep}
+              img={shepImg}
               students="215"
             />
           </div>
@@ -107,7 +109,7 @@ import CourseCard from "../components/CourseCard.astro";
               grade="Masters"
               countries={[us, gb]}
               author={{ name: "Anne Wilson", img: girl2 }}
-              img={teeth}
+              img={teethImg}
               students="215"
             />
           </div>
@@ -117,7 +119,7 @@ import CourseCard from "../components/CourseCard.astro";
               grade="Bachelor"
               countries={[us, es]}
               author={{ name: "Jane Anderson", img: girl3 }}
-              img={update}
+              img={updateImg}
               students="156"
             />
           </div>
