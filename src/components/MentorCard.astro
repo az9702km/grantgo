@@ -12,11 +12,13 @@ const { name, img, id } = Astro.props;
       <div class="relative rounded-md overflow-hidden">
         <img src={img.src} class="w-full aspect-square object-cover" alt="" />
         <label
+          x-data="{ checked: false }"
           for={id}
           class="absolute top-3 right-3 z-10 p-2 leading-none cursor-pointer">
-          <input id={id} type="checkbox" class="hidden peer" />
+          <input id={id} type="checkbox" class="hidden" x-model="checked" />
           <i
-            class="ti text-2xl leading-none text-white before:content-['\\eabe'] peer-checked:text-red-500 peer-checked:before:content-['\\f67c']"
+            :class="checked ? 'ti-heart-filled text-red-500' : 'ti-heart' "
+            class="ti text-2xl leading-none text-white transition-all duration-300"
           ></i>
         </label>
         <div
@@ -50,7 +52,7 @@ const { name, img, id } = Astro.props;
     </div>
   </div>
   <a
-    href="#!"
+    href="/mentor"
     class="before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0"
   ></a>
 </div>
