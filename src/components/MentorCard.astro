@@ -17,9 +17,8 @@ const { name, img, id } = Astro.props;
           class="absolute top-3 right-3 z-10 p-2 leading-none cursor-pointer">
           <input id={id} type="checkbox" class="hidden" x-model="checked" />
           <i
-            :class="checked ? 'ti-heart-filled text-red-500' : 'ti-heart' "
-            class="ti text-2xl leading-none text-white transition-all duration-300"
-          ></i>
+            :class="checked ? 'ti-heart-filled text-red-500' : 'ti-heart text-white' "
+            class="ti text-2xl leading-none transition-all duration-300"></i>
         </label>
         <div
           class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 text-white">
