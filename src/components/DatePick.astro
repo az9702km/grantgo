@@ -1,0 +1,12 @@
+---
+const { id, date, day, slots } = Astro.props;
+---
+
+<label
+  for={id}
+  class="flex flex-col gap-y-1 py-4 px-2 rounded-lg border has-[:checked]:border-blue-500 text-center cursor-pointer">
+  <span class="text-xs font-medium text-slate-500 uppercase">{day}</span>
+  <span class="text-sm font-semibold">{date}</span>
+  <span class="text-xs font-medium text-slate-500">{slots} slots</span>
+  <input type="radio" name="date" id={id} class="hidden" />
+</label>

@@ -1,0 +1,218 @@
+---
+import Layout from "../layouts/Layout.astro";
+import courseImg from "../assets/imgs/courses/course.jpg";
+import CountryBadge from "../components/CountryBadge.astro";
+import Button from "../components/Button.astro";
+
+import guy1 from "../assets/imgs/avatar/guy-1.png";
+import guy2 from "../assets/imgs/avatar/guy-2.png";
+import guy3 from "../assets/imgs/avatar/guy-3.png";
+import girl1 from "../assets/imgs/avatar/girl-1.png";
+import girl2 from "../assets/imgs/avatar/girl-2.png";
+import girl3 from "../assets/imgs/avatar/girl-3.png";
+
+import cambridge from "../assets/imgs/universities/cambridge.png";
+import SideSections from "../components/SideSections.astro";
+import CardSection from "../components/CardSection.astro";
+
+import us from "../assets/imgs/countries/us.png";
+import gb from "../assets/imgs/countries/gb.png";
+import de from "../assets/imgs/countries/de.png";
+import sg from "../assets/imgs/countries/sg.png";
+import es from "../assets/imgs/countries/es.png";
+import fi from "../assets/imgs/countries/fi.png";
+import qa from "../assets/imgs/countries/qa.png";
+import ae from "../assets/imgs/countries/ae.png";
+import tr from "../assets/imgs/countries/tr.png";
+
+import DatePick from "../components/DatePick.astro";
+import TimePick from "../components/TimePick.astro";
+import FormControl from "../components/FormControl.astro";
+import Input from "../components/Input.astro";
+import CourseCard from "../components/CourseCard.astro";
+---
+
+<Layout title="Course name.">
+  <main>
+    <section class="pt-10 pb-32">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="lg:col-span-7">
+            <div class="flex gap-x-6 mb-6">
+              <img
+                src={guy1.src}
+                alt=""
+                class="aspect-square w-48 rounded-lg"
+              />
+              <div class="flex flex-col py-4 gap-y-6">
+                <h1 class="text-3xl font-nosans font-semibold">
+                  Alexander James
+                </h1>
+                <div class="flex gap-2 items-center text-slate-500 text-lg">
+                  <img
+                    src={cambridge.src}
+                    class="inline-block leading-none w-8 h-8"
+                    alt=""
+                  />
+                  University of Cambridge
+                </div>
+                <div class="flex gap-x-4">
+                  <a
+                    href="#!"
+                    class="p-2 bg-slate-100 hover:bg-slate-200 leading-none rounded-md">
+                    <i class="ti ti-brand-linkedin text-2xl leading-none"></i>
+                  </a>
+                  <a
+                    href="#!"
+                    class="p-2 bg-slate-100 hover:bg-slate-200 leading-none rounded-md">
+                    <i class="ti ti-brand-telegram text-2xl leading-none"></i>
+                  </a>
+                  <a
+                    href="#!"
+                    class="p-2 bg-slate-100 hover:bg-slate-200 leading-none rounded-md">
+                    <i class="ti ti-brand-instagram text-2xl leading-none"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col mb-8">
+              <div class="line-clamp-2 mb-2">
+                Alexander James an MBA from Harvard Business School and began
+                his career in management consulting with XYZ Consulting. He
+                quickly realized his passion for entrepreneurship and founded
+                his first company.
+              </div>
+              <button
+                class="text-blue-500 inline-flex items-center text-sm leading-6 font-semibold self-start"
+                >Show more <i class="ti ti-chevron-down text-xl"></i></button
+              >
+            </div>
+            <div class="rounded-xl border p-6 flex flex-col gap-y-6 mb-6">
+              <h2
+                class="flex items-center text-2xl font-nosans font-semibold gap-x-2">
+                <i class="ti ti-award-filled"></i> Achievements
+              </h2>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <div class="text-lg font-medium">Stupendium Hungaricum</div>
+                  <div class="text-sm text-slate-500">
+                    Scholarship is dedicated to recognizing and supporting
+                    outstanding students who exhibit academic excellence.
+                  </div>
+                </div>
+                <div>
+                  <div class="text-lg font-medium">Fulpright</div>
+                  <div class="text-sm text-slate-500">
+                    Scholarship is dedicated to recognizing and supporting
+                    outstanding students who exhibit academic excellence.
+                  </div>
+                </div>
+                <div>
+                  <div class="text-lg font-medium">Chevening</div>
+                  <div class="text-sm text-slate-500">
+                    Scholarship is dedicated to recognizing and supporting
+                    outstanding students who exhibit academic excellence.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-xl border p-6 flex flex-col gap-y-6 mb-6">
+              <h2
+                class="flex items-center text-2xl font-nosans font-semibold gap-x-2">
+                <i class="ti ti-book-filled"></i> Mentor’s courses
+              </h2>
+              <div class="flex flex-col gap-y-6">
+                <CourseCard
+                  countries={[us, gb, de, sg, es]}
+                  grade="Bachelor"
+                  title="Developing a winning scholarship essay"
+                  students="215"
+                  author={{ name: "David Miller", img: guy3 }}
+                />
+                <CourseCard
+                  countries={[gb, de, fi, es]}
+                  grade="Masters"
+                  title="Maximizing financial aid and scholarship packages"
+                  students="215"
+                  author={{ name: "Anne Wilson", img: girl2 }}
+                />
+                <button
+                  class="text-blue-500 inline-flex items-center text-sm leading-6 font-semibold self-center"
+                  >Show more <i class="ti ti-chevron-down text-xl"></i></button
+                >
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5">
+            <SideSections>
+              <CardSection>
+                <Fragment slot="header">Session</Fragment>
+                <div class="px-1 flex flex-col gap-y-6" slot="body">
+                  <div>
+                    <div class="text-slate-500 mb-2">
+                      Choose one of the days below to contact a mentor
+                    </div>
+                    <div class="grid grid-cols-5 gap-x-4">
+                      <DatePick id="1" day="THU" date="20 Jun" slots="4" />
+                      <DatePick id="2" day="fri" date="21 Jun" slots="2" />
+                      <DatePick id="3" day="Sat" date="22 Jun" slots="1" />
+                      <DatePick id="4" day="SUN" date="23 Jun" slots="4" />
+                      <DatePick id="5" day="Mon" date="24 Jun" slots="3" />
+                    </div>
+                  </div>
+                  <hr />
+                  <div>
+                    <div class="text-slate-500 mb-2">Available time slots</div>
+                    <div class="grid grid-cols-4 gap-x-4">
+                      <TimePick id="t1" time="19:30 PM" />
+                      <TimePick id="t2" time="21:00 PM" />
+                      <TimePick id="t3" time="01:00 PM" />
+                      <TimePick id="t4" time="04:00 PM" />
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="flex gap-x-4">
+                    <div class="flex-grow text-sm font-medium">
+                      Session cost
+                    </div>
+                    <div class="flex-grow text-sm font-medium text-end">
+                      150 000 sum/soat
+                    </div>
+                  </div>
+                  <hr />
+                  <FormControl labelText="Email or Phone number">
+                    <Input placeholder="Email or number" slot="formEl" />
+                  </FormControl>
+                  <FormControl labelText="For additional questions">
+                    <Input placeholder="Write your questions" slot="formEl" />
+                  </FormControl>
+                  <Button>Book Session</Button>
+                </div>
+              </CardSection>
+            </SideSections>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer utilities {
+    *::-webkit-scrollbar {
+      @apply bg-transparent w-1;
+    }
+
+    *::-webkit-scrollbar-button {
+      @apply hidden;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      @apply bg-slate-200 rounded-lg;
+    }
+  }
+</style>

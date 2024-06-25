@@ -1,0 +1,16 @@
+---
+
+---
+
+<div class="px-10 py-6 bg-white rounded-xl h-full flex flex-col">
+  <h3
+    class="text-secondary font-nosans font-semibold text-4xl leading-normal mb-3">
+    <slot name="name" />
+  </h3>
+  <div class="flex-grow mb-8">
+    <slot name="body" />
+  </div>
+  <div class="pt-3 border-t text-5xl leading-normal font-nosans font-semibold">
+    <slot name="price" />
+  </div>
+</div>

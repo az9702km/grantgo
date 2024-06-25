@@ -1,0 +1,379 @@
+---
+import Layout from "../layouts/Layout.astro";
+import courseImg from "../assets/imgs/courses/course.jpg";
+import CountryBadge from "../components/CountryBadge.astro";
+import Button from "../components/Button.astro";
+import guy1 from "../assets/imgs/avatar/guy-1.png";
+import cambridge from "../assets/imgs/universities/cambridge.png";
+import SideSections from "../components/SideSections.astro";
+import CardSection from "../components/CardSection.astro";
+import LessonList from "../components/LessonList.astro";
+import PriceCard from "../components/PriceCard.astro";
+import FeaturesList from "../components/FeaturesList.astro";
+import AccordionItem from "../components/Accordion/AccordionItem.astro";
+import Accordion from "../components/Accordion/Accordion.astro";
+---
+
+<Layout title="Course name.">
+  <main>
+    <section class="pt-10 pb-20">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="lg:col-span-6">
+            <div class="flex flex-col gap-10">
+              <div class="flex flex-col gap-4">
+                <div
+                  class="rounded-xl border relative overflow-hidden leading-none">
+                  <button
+                    class="bg-primary/40 backdrop-blur-xl absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full p-3"
+                    ><i
+                      class="ti ti-player-play text-[2.5rem] leading-none text-white"
+                    ></i></button
+                  >
+                  <img src={courseImg.src} class="aspect-video w-full" alt="" />
+                </div>
+                <h1 class="text-[1.75rem] leading-tight font-medium">
+                  Global scholarship opportunities for higher education
+                </h1>
+              </div>
+              <div class="grid lg:grid-cols-3 gap-6">
+                <div>
+                  <div class="text-2xl">Start time</div>
+                  <div class="text-xl text-slate-500">8 June 2024</div>
+                </div>
+                <div>
+                  <div class="text-2xl">Degree</div>
+                  <div class="text-xl text-slate-500">Master</div>
+                </div>
+                <div>
+                  <div class="text-2xl">Format</div>
+                  <div class="text-xl text-slate-500">Online</div>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <h2 class="text-2xl mb-2 font-nosans">Countries</h2>
+                <div class="grid lg:grid-cols-5 gap-x-4 gap-y-1">
+                  <CountryBadge country="gb" title="England" />
+                  <CountryBadge country="de" title="Germany" />
+                  <CountryBadge country="es" title="Spain" />
+                  <CountryBadge country="fi" title="Finland" />
+                  <CountryBadge country="ae" title="UAE" />
+                  <CountryBadge country="qa" title="Qatar" />
+                  <CountryBadge country="us" title="USA" />
+                  <CountryBadge country="tr" title="Turkey" />
+                </div>
+              </div>
+              <Button>Buy</Button>
+              <hr />
+              <p class="text-slate-500">
+                Scholarship is dedicated to recognizing and supporting
+                outstanding students who exhibit academic excellence, leadership
+                potential, and a commitment to their community. This scholarship
+                is intended to provide financial assistance to undergraduate or
+                graduate students enrolled, helping them achieve their
+                educational and professional goals.
+              </p>
+              <hr />
+              <div class="rounded-xl border p-4 flex gap-x-4">
+                <img
+                  src={guy1.src}
+                  alt=""
+                  class="w-44 aspect-square inline-block rounded-[10px] flex-shrink-0"
+                />
+                <div class="flex flex-col gap-4">
+                  <h3 class="text-lg font-semibold font-nosans">
+                    Alexander James
+                  </h3>
+                  <div class="flex gap-2 items-center text-slate-500 text-sm">
+                    <img
+                      src={cambridge.src}
+                      class="inline-block leading-none w-6 h-6"
+                      alt=""
+                    />
+                    University of Cambridge
+                  </div>
+                  <div>
+                    <div class="text-sm text-slate-500 mb-1">Scholarship:</div>
+                    <div>
+                      <a href="#!">Stipendium Hungaricum</a>, <a href="#!"
+                        >Fulbright</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-6">
+            <div class="overflow-auto h-px min-h-full max-h-full">
+              <SideSections>
+                <CardSection>
+                  <Fragment slot="header">1. Scholarship Opportunities</Fragment
+                  >
+                  <Fragment slot="body">
+                    <LessonList>
+                      <li>Introduction to Scholarships</li>
+                      <li>Researching Scholarships</li>
+                      <li>Eligibility Criteria</li>
+                      <li>Using online scholarship databases</li>
+                      <li>Understanding specific scholarship criteria</li>
+                    </LessonList>
+                  </Fragment>
+                </CardSection>
+                <CardSection>
+                  <Fragment slot="header">2. Academic Preparation</Fragment>
+                  <Fragment slot="body">
+                    <LessonList>
+                      <li>Maintaining a Strong GPA</li>
+                      <li>Standardized Tests</li>
+                      <li>Understanding the role of test scores</li>
+                      <li>Importance of academic performance</li>
+                      <li>Using online scholarship databases</li>
+                      <li>
+                        Strategies for improving and maintaining a high GPA
+                      </li>
+                    </LessonList>
+                  </Fragment>
+                </CardSection>
+                <CardSection>
+                  <Fragment slot="header">3. Building a Strong Profile</Fragment
+                  >
+                  <Fragment slot="body">
+                    <LessonList>
+                      <li>Extracurricular Activities</li>
+                      <li>Leadership Experience</li>
+                      <li>Community Service</li>
+                      <li>
+                        Finding and participating in meaningful volunteer work
+                      </li>
+                      <li>Reflecting on and documenting your contributions</li>
+                      <li>Importance of academic performance</li>
+                    </LessonList>
+                  </Fragment>
+                </CardSection>
+                <CardSection>
+                  <Fragment slot="header">4. Building a Strong Profile</Fragment
+                  >
+                  <Fragment slot="body">
+                    <LessonList>
+                      <li>Extracurricular Activities</li>
+                      <li>Leadership Experience</li>
+                      <li>Community Service</li>
+                      <li>
+                        Finding and participating in meaningful volunteer work
+                      </li>
+                      <li>Reflecting on and documenting your contributions</li>
+                      <li>Importance of academic performance</li>
+                    </LessonList>
+                  </Fragment>
+                </CardSection>
+              </SideSections>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-slate-100">
+      <div class="container">
+        <h2
+          class="text-center text-5xl leading-normal font-semibold font-nosans mb-10">
+          Course packages
+        </h2>
+        <div class="grid grid-cols-12 gap-x-6 gap-y-10">
+          <div class="col-span-4">
+            <PriceCard>
+              <Fragment slot="name">Basic</Fragment>
+              <FeaturesList slot="body">
+                <li>$1,000 towards tuition or educational expenses.</li>
+                <li>
+                  One 1-hour mentoring session with a university faculty member.
+                </li>
+                <li>
+                  Access to university-sponsored academic resources and
+                  workshops.
+                </li>
+              </FeaturesList>
+              <Fragment slot="price">$1,000</Fragment>
+            </PriceCard>
+          </div>
+          <div class="col-span-4">
+            <PriceCard>
+              <Fragment slot="name">Plus</Fragment>
+              <FeaturesList slot="body">
+                <li>$2,500 towards tuition or research-related expenses.</li>
+                <li>
+                  Access to advanced university courses, seminars, and research
+                  facilities.
+                </li>
+                <li>
+                  Three 1-hour mentoring sessions with a university faculty
+                  member.
+                </li>
+                <li>
+                  Opportunity to participate in a university research project.
+                </li>
+              </FeaturesList>
+              <Fragment slot="price">$2,500</Fragment>
+            </PriceCard>
+          </div>
+          <div class="col-span-4">
+            <PriceCard>
+              <Fragment slot="name">Premium</Fragment>
+              <FeaturesList slot="body">
+                <li>
+                  $5,000 towards tuition, research funding, or professional
+                  development.
+                </li>
+                <li>
+                  Full access to premium university courses, seminars, and
+                  conferences.
+                </li>
+                <li>
+                  Full access to premium university courses, seminars, and
+                  conferences.
+                </li>
+                <li>Opportunity to lead a university research project.</li>
+              </FeaturesList>
+              <Fragment slot="price">$5,000</Fragment>
+            </PriceCard>
+          </div>
+          <div class="col-span-4 col-start-5">
+            <Button utils="w-full">Buy</Button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-20 pb-32">
+      <div class="container">
+        <div class="lg:px-24">
+          <h2 class="text-5xl leading-normal font-semibold font-nosans mb-6">
+            FAQ
+          </h2>
+          <Accordion init="1">
+            <AccordionItem id="1">
+              <Fragment slot="header"
+                >Who is eligible to apply for scholarships?</Fragment
+              >
+              <Fragment slot="body"
+                >Eligibility varies by scholarship. Common criteria include
+                academic achievement, financial need, extracurricular
+                involvement, leadership qualities, and specific demographics or
+                fields of study.</Fragment
+              >
+            </AccordionItem>
+            <AccordionItem id="2">
+              <Fragment slot="header"
+                >How can I find scholarships available at my university?</Fragment
+              >
+              <Fragment slot="body"
+                >Eligibility varies by scholarship. Common criteria include
+                academic achievement, financial need, extracurricular
+                involvement, leadership qualities, and specific demographics or
+                fields of study.</Fragment
+              >
+            </AccordionItem>
+            <AccordionItem id="3">
+              <Fragment slot="header"
+                >Can I apply for more than one scholarship?</Fragment
+              >
+              <Fragment slot="body"
+                >Eligibility varies by scholarship. Common criteria include
+                academic achievement, financial need, extracurricular
+                involvement, leadership qualities, and specific demographics or
+                fields of study.</Fragment
+              >
+            </AccordionItem>
+            <AccordionItem id="4">
+              <Fragment slot="header"
+                >What documents are typically required for a scholarship
+                application?</Fragment
+              >
+              <Fragment slot="body"
+                >Eligibility varies by scholarship. Common criteria include
+                academic achievement, financial need, extracurricular
+                involvement, leadership qualities, and specific demographics or
+                fields of study.</Fragment
+              >
+            </AccordionItem>
+            <AccordionItem id="5">
+              <Fragment slot="header"
+                >Who is eligible to apply for scholarships?</Fragment
+              >
+              <Fragment slot="body"
+                >Eligibility varies by scholarship. Common criteria include
+                academic achievement, financial need, extracurricular
+                involvement, leadership qualities, and specific demographics or
+                fields of study.</Fragment
+              >
+            </AccordionItem>
+            <AccordionItem id="6">
+              <Fragment slot="header"
+                >How important are letters of recommendation?</Fragment
+              >
+              <Fragment slot="body"
+                >Eligibility varies by scholarship. Common criteria include
+                academic achievement, financial need, extracurricular
+                involvement, leadership qualities, and specific demographics or
+                fields of study.</Fragment
+              >
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </div>
+    </section>
+    <section
+      x-data="{ showBottom: false }"
+      @scroll.window="showBottom = (window.pageYOffset < window.innerHeight / 4) ? false: true"
+      :class=" showBottom ? 'bottom-0' : '-bottom-full' "
+      class="sticky bg-white border-t py-6 transition-all duration-500">
+      <div class="container">
+        <div class="grid grid-cols-12 items-center">
+          <div class="col-span-7">
+            <h3 class="text-2xl font-medium">
+              Global scholarship opportunities for higher education
+            </h3>
+          </div>
+          <div class="col-span-5">
+            <div class="flex gap-x-4 items-center">
+              <div class="flex flex-col flex-grow">
+                <div class="font-medium">Start time</div>
+                <div class="font-medium text-slate-500">8 June 2024</div>
+              </div>
+              <div class="flex flex-col flex-grow">
+                <div class="font-medium">Start time</div>
+                <div class="font-medium text-slate-500">8 June 2024</div>
+              </div>
+              <div class="flex flex-col flex-grow">
+                <div class="font-medium">Start time</div>
+                <div class="font-medium text-slate-500">8 June 2024</div>
+              </div>
+              <div class="flex flex-col flex-grow">
+                <Button>Buy <i class="ti ti-arrow-right"></i></Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer utilities {
+    *::-webkit-scrollbar {
+      @apply bg-transparent w-1;
+    }
+
+    *::-webkit-scrollbar-button {
+      @apply hidden;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      @apply bg-slate-200 rounded-lg;
+    }
+  }
+</style>

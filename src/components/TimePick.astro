@@ -1,0 +1,10 @@
+---
+const { id, time } = Astro.props;
+---
+
+<label
+  for={id}
+  class="flex flex-col gap-y-1 p-2 rounded-lg border has-[:checked]:border-blue-500 text-center cursor-pointer">
+  <span class="text-sm font-semibold">{time}</span>
+  <input type="radio" name="time" id={id} class="hidden" />
+</label>

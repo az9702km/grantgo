@@ -4,7 +4,7 @@ const { title, grade, students, author, countries, img } = Astro.props;
 
 <div
   class="rounded-lg border overflow-hidden bg-white relative hover:shadow-lg transition">
-  <img src={img.src} class="object-cover aspect-video w-full" alt="" />
+  {img && <img src={img.src} class="object-cover aspect-video w-full" alt="" />}
   <div class="p-6">
     <div class="flex justify-between mb-4">
       <a

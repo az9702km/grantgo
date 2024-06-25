@@ -1,0 +1,54 @@
+---
+import us from "../assets/imgs/countries/us.png";
+import gb from "../assets/imgs/countries/gb.png";
+import de from "../assets/imgs/countries/de.png";
+import sg from "../assets/imgs/countries/sg.png";
+import es from "../assets/imgs/countries/es.png";
+import fi from "../assets/imgs/countries/fi.png";
+import qa from "../assets/imgs/countries/qa.png";
+import ae from "../assets/imgs/countries/ae.png";
+import tr from "../assets/imgs/countries/tr.png";
+
+const countryFlag = (name) => {
+  switch (name) {
+    case "us":
+      return us;
+    case "gb":
+      return gb;
+    case "de":
+      return de;
+    case "sg":
+      return sg;
+    case "es":
+      return es;
+    case "fi":
+      return fi;
+    case "qa":
+      return qa;
+    case "ae":
+      return ae;
+    case "tr":
+      return tr;
+    default:
+      return us;
+  }
+};
+
+const { country, title, size } = Astro.props;
+---
+
+<div
+  class:list={[
+    size == "sm" ? "text-sm" : "text-xl",
+    "flex items-center  gap-x-1 text-slate-500",
+  ]}>
+  <img
+    src={countryFlag(country).src}
+    alt=""
+    class:list={[
+      size == "sm" ? "w-5 h-5" : "w-6 h-6",
+      "inline-block leading-none flex-shrink-0",
+    ]}
+  />
+  {title}
+</div>

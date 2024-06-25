@@ -7,6 +7,7 @@ import shepImg from "../assets/imgs/courses/shep.jpg";
 import teethImg from "../assets/imgs/courses/teeth.jpg";
 import updateImg from "../assets/imgs/courses/update.jpg";
 import vitoImg from "../assets/imgs/courses/vito.jpg";
+import cambridge from "../assets/imgs/universities/cambridge.png";
 
 import us from "../assets/imgs/countries/us.png";
 import gb from "../assets/imgs/countries/gb.png";
@@ -21,14 +22,16 @@ import girl1 from "../assets/imgs/avatar/girl-1.png";
 import girl2 from "../assets/imgs/avatar/girl-2.png";
 import girl3 from "../assets/imgs/avatar/girl-3.png";
 import CourseCard from "../components/CourseCard.astro";
+import CountryBadge from "../components/CountryBadge.astro";
+import MentorCard from "../components/MentorCard.astro";
 ---
 
-<Layout title="Welcome to GrantGo.">
+<Layout title="Mentors.">
   <main>
-    <div class="container px-4 lg:px-0">
+    <div class="container px-4 md:px-0">
       <section class="pb-32 pt-10">
         <h1 class="text-primary text-5xl leading-normal font-semibold mb-3">
-          Our courses
+          Mentors
         </h1>
         <div class="sticky top-16 z-50 bg-white left-0 right-0 mb-3">
           <div class="flex gap-4 py-3 ps-1 overflow-auto">
@@ -65,65 +68,29 @@ import CourseCard from "../components/CourseCard.astro";
           </div>
         </div>
         <div class="grid grid-cols-12 gap-6">
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Fundamentals of scholarship application writing"
-              grade="Bachelor"
-              countries={[us, de, sg, es]}
-              author={{ name: "Alexander James", img: guy1 }}
-              img={courseImg}
-              students="215"
-            />
+          <div class="md:col-span-3 col-span-12">
+            <MentorCard id="1" img={guy1} name="Alexander James" />
           </div>
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Global scholarship opportunities for higher education"
-              grade="Masters"
-              countries={[us, gb]}
-              author={{ name: "Victoria Harris", img: girl1 }}
-              img={vitoImg}
-              students="215"
-            />
+          <div class="md:col-span-3 col-span-12">
+            <MentorCard id="2" img={guy3} name="David Miller" />
           </div>
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Navigating merit-based and need-based scholarships"
-              grade="Bachelor"
-              countries={[us, gb]}
-              author={{ name: "Michael Scott", img: guy2 }}
-              img={shiImg}
-              students="156"
-            />
+          <div class="md:col-span-3 col-span-12">
+            <MentorCard id="3" img={girl2} name="Anne Wilson" />
           </div>
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Developing a winning scholarship essay"
-              grade="Bachelor"
-              countries={[us, de, sg, es]}
-              author={{ name: "David Miller", img: guy3 }}
-              img={shepImg}
-              students="215"
-            />
+          <div class="md:col-span-3 col-span-12">
+            <MentorCard id="4" img={girl3} name="Anne Wilson" />
           </div>
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Maximizing financial aid and scholarship packages"
-              grade="Masters"
-              countries={[us, gb]}
-              author={{ name: "Anne Wilson", img: girl2 }}
-              img={teethImg}
-              students="215"
-            />
+          <div class="md:col-span-3 col-span-12">
+            <MentorCard id="5" img={guy1} name="Alexander James" />
           </div>
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Building a strong scholarship application portfolio"
-              grade="Bachelor"
-              countries={[us, es]}
-              author={{ name: "Jane Anderson", img: girl3 }}
-              img={updateImg}
-              students="156"
-            />
+          <div class="md:col-span-3 col-span-12">
+            <MentorCard id="6" img={guy3} name="David Miller" />
+          </div>
+          <div class="md:col-span-3 col-span-12">
+            <MentorCard id="7" img={girl2} name="Anne Wilson" />
+          </div>
+          <div class="md:col-span-3 col-span-12">
+            <MentorCard id="8" img={girl3} name="Anne Wilson" />
           </div>
         </div>
       </section>

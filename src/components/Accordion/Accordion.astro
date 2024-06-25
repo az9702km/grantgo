@@ -1,0 +1,7 @@
+---
+const { init } = Astro.props;
+---
+
+<div class="border-y divide-y" x-data=`{ selectedAccordionItem: '${init}' }`>
+  <slot />
+</div>
