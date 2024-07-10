@@ -1,17 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import courseImg from "../assets/imgs/courses/course.jpg";
-import CountryBadge from "../components/CountryBadge.astro";
+import bg1 from "../assets/imgs/mentor/bg-01.png";
 import Button from "../components/Button.astro";
+import Select from "../components/Select.astro";
+import TextArea from "../components/TextArea.astro";
 
 import guy1 from "../assets/imgs/avatar/guy-1.png";
 import guy2 from "../assets/imgs/avatar/guy-2.png";
-import guy3 from "../assets/imgs/avatar/guy-3.png";
 import girl1 from "../assets/imgs/avatar/girl-1.png";
-import girl2 from "../assets/imgs/avatar/girl-2.png";
-import girl3 from "../assets/imgs/avatar/girl-3.png";
 
-import cambridge from "../assets/imgs/universities/cambridge.png";
+import courseImg from "../assets/imgs/courses/course.jpg";
+import shiImg from "../assets/imgs/courses/shi.jpg";
+import vitoImg from "../assets/imgs/courses/vito.jpg";
+
 import SideSections from "../components/SideSections.astro";
 import CardSection from "../components/CardSection.astro";
 
@@ -20,144 +21,452 @@ import gb from "../assets/imgs/countries/gb.png";
 import de from "../assets/imgs/countries/de.png";
 import sg from "../assets/imgs/countries/sg.png";
 import es from "../assets/imgs/countries/es.png";
-import fi from "../assets/imgs/countries/fi.png";
-import qa from "../assets/imgs/countries/qa.png";
-import ae from "../assets/imgs/countries/ae.png";
-import tr from "../assets/imgs/countries/tr.png";
 
 import DatePick from "../components/DatePick.astro";
 import TimePick from "../components/TimePick.astro";
 import FormControl from "../components/FormControl.astro";
 import Input from "../components/Input.astro";
 import CourseCard from "../components/CourseCard.astro";
+import DateDay from "../components/DateDay.astro";
 ---
 
 <Layout title="Course name.">
   <main>
-    <section class="pt-10 pb-32">
+    <section>
+      <img
+        src={bg1.src}
+        class="h-[30vh] inline-block object-cover w-full"
+        alt=""
+      />
+      <div class="container">
+        <div class="flex items-end -mt-5">
+          <img
+            src={guy1.src}
+            class="w-[7.5rem] h-[7.5rem] flex-shrink-0 border-2 border-white rounded-full"
+            alt=""
+          />
+          <div class="ms-4 mb-5">
+            <div class="flex items-center mb-2">
+              <h1 class="text-xl font-semibold me-2 font-nosans">
+                Alexander James
+              </h1>
+              <img
+                src={gb.src}
+                class="w-5 h-5 inline-block leading-none"
+                alt=""
+              />
+            </div>
+            <div class="text-sm">
+              Doctor of Philosophy (PhD) in Computer Science, University of
+              Oxford
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-16 pb-32">
       <div class="container">
         <div class="grid grid-cols-12 gap-6">
           <div class="lg:col-span-7">
-            <div class="flex gap-x-6 mb-6">
-              <img
-                src={guy1.src}
-                alt=""
-                class="aspect-square w-48 rounded-lg"
-              />
-              <div class="flex flex-col py-4 gap-y-6">
-                <h1 class="text-3xl font-nosans font-semibold">
-                  Alexander James
-                </h1>
-                <div class="flex gap-2 items-center text-slate-500 text-lg">
-                  <img
-                    src={cambridge.src}
-                    class="inline-block leading-none w-8 h-8"
-                    alt=""
-                  />
-                  University of Cambridge
-                </div>
-                <div class="flex gap-x-4">
-                  <a
-                    href="#!"
-                    class="p-2 bg-slate-100 hover:bg-slate-200 leading-none rounded-md">
-                    <i class="ti ti-brand-linkedin text-2xl leading-none"></i>
-                  </a>
-                  <a
-                    href="#!"
-                    class="p-2 bg-slate-100 hover:bg-slate-200 leading-none rounded-md">
-                    <i class="ti ti-brand-telegram text-2xl leading-none"></i>
-                  </a>
-                  <a
-                    href="#!"
-                    class="p-2 bg-slate-100 hover:bg-slate-200 leading-none rounded-md">
-                    <i class="ti ti-brand-instagram text-2xl leading-none"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col mb-8">
-              <div class="line-clamp-2 mb-2">
-                Alexander James an MBA from Harvard Business School and began
-                his career in management consulting with XYZ Consulting. He
-                quickly realized his passion for entrepreneurship and founded
-                his first company.
-              </div>
-              <button
-                class="text-blue-500 inline-flex items-center text-sm leading-6 font-semibold self-start"
-                >Show more <i class="ti ti-chevron-down text-xl"></i></button
-              >
-            </div>
-            <div class="rounded-xl border p-6 flex flex-col gap-y-6 mb-6">
-              <h2
-                class="flex items-center text-2xl font-nosans font-semibold gap-x-2">
-                <i class="ti ti-award-filled"></i> Achievements
-              </h2>
-              <div class="flex flex-col gap-y-4">
-                <div>
-                  <div class="text-lg font-medium">Stupendium Hungaricum</div>
-                  <div class="text-sm text-slate-500">
-                    Scholarship is dedicated to recognizing and supporting
-                    outstanding students who exhibit academic excellence.
-                  </div>
-                </div>
-                <div>
-                  <div class="text-lg font-medium">Fulpright</div>
-                  <div class="text-sm text-slate-500">
-                    Scholarship is dedicated to recognizing and supporting
-                    outstanding students who exhibit academic excellence.
-                  </div>
-                </div>
-                <div>
-                  <div class="text-lg font-medium">Chevening</div>
-                  <div class="text-sm text-slate-500">
-                    Scholarship is dedicated to recognizing and supporting
-                    outstanding students who exhibit academic excellence.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="rounded-xl border p-6 flex flex-col gap-y-6 mb-6">
-              <h2
-                class="flex items-center text-2xl font-nosans font-semibold gap-x-2">
-                <i class="ti ti-book-filled"></i> Mentor’s courses
-              </h2>
-              <div class="flex flex-col gap-y-6">
-                <CourseCard
-                  countries={[us, gb, de, sg, es]}
-                  grade="Bachelor"
-                  title="Developing a winning scholarship essay"
-                  students="215"
-                  author={{ name: "David Miller", img: guy3 }}
-                />
-                <CourseCard
-                  countries={[gb, de, fi, es]}
-                  grade="Masters"
-                  title="Maximizing financial aid and scholarship packages"
-                  students="215"
-                  author={{ name: "Anne Wilson", img: girl2 }}
-                />
+            <div class="flex flex-col gap-y-10">
+              <div class="flex flex-col">
+                <h2 class="font-nosans text-2xl font-semibold mb-2">
+                  About me
+                </h2>
+                <p class="line-clamp-2 mb-2">
+                  Alexander James an MBA from Harvard Business School and began
+                  his career in management consulting with XYZ Consulting. He
+                  quickly realized his passion for entrepreneurship and founded
+                  his first company.
+                </p>
                 <button
-                  class="text-blue-500 inline-flex items-center text-sm leading-6 font-semibold self-center"
+                  class="text-blue-500 inline-flex items-center text-sm leading-6 font-semibold self-start"
                   >Show more <i class="ti ti-chevron-down text-xl"></i></button
                 >
               </div>
+              <hr />
+              <div class="flex flex-col gap-y-4">
+                <h2 class="text-2xl font-nosans font-semibold">I talk about</h2>
+                <div class="flex flex-wrap gap-x-2">
+                  <a
+                    href="#!"
+                    class="inline-block text-sm py-1.5 px-3 border border-blue-200 text-blue-500 bg-blue-50 rounded-full"
+                    >Chevening</a
+                  >
+                  <a
+                    href="#!"
+                    class="inline-block text-sm py-1.5 px-3 border border-blue-200 text-blue-500 bg-blue-50 rounded-full"
+                    >Financial Aid</a
+                  >
+                  <a
+                    href="#!"
+                    class="inline-block text-sm py-1.5 px-3 border border-blue-200 text-blue-500 bg-blue-50 rounded-full"
+                    >International Scholarships</a
+                  >
+                  <a
+                    href="#!"
+                    class="inline-block text-sm py-1.5 px-3 border border-blue-200 text-blue-500 bg-blue-50 rounded-full"
+                    >Scholarship Interviews</a
+                  >
+                </div>
+              </div>
+              <hr />
+              <div class="flex flex-col gap-y-4">
+                <h2 class="text-2xl font-nosans font-semibold">Education</h2>
+                <div class="flex flex-col gap-y-4">
+                  <div class="flex p-4 rounded-xl border gap-x-4 relative">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Oxford-University-Circlet.svg/1636px-Oxford-University-Circlet.svg.png"
+                      alt=""
+                      class="flex-shrink-0 w-12 h-12 object-contain"
+                    />
+                    <div class="flex flex-col gap-y-1">
+                      <div class="text-xl font-medium">
+                        <a
+                          href="#!"
+                          class="before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0">
+                          University of Oxford</a
+                        >
+                      </div>
+                      <div class="text-sm">
+                        Doctor of Philosophy - PhD, Computer Science
+                      </div>
+                      <div class="text-sm text-slate-500">2024 - 2028</div>
+                    </div>
+                  </div>
+                  <div class="flex p-4 rounded-xl border gap-x-4 relative">
+                    <img
+                      src="https://cdn.freebiesupply.com/logos/large/2x/university-of-cambridge-2-logo-png-transparent.png"
+                      alt=""
+                      class="flex-shrink-0 w-12 h-12 object-contain"
+                    />
+                    <div class="flex flex-col gap-y-1">
+                      <div class="text-xl font-medium">
+                        <a
+                          href="#!"
+                          class="before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0">
+                          University of Cambridge</a
+                        >
+                      </div>
+                      <div class="text-sm">Marketing (Master's degree)</div>
+                      <div class="text-sm text-slate-500">2021 - 2023</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="flex flex-col gap-y-4">
+                <h2 class="text-2xl font-nosans font-semibold">Achievements</h2>
+                <div class="flex flex-col gap-y-4">
+                  <div>
+                    <div class="text-lg font-medium">
+                      Need-Based Scholarships
+                    </div>
+                    <div class="text-sm text-slate-500">
+                      These scholarships are awarded based on the financial need
+                      of the student and their family. Financial need is usually
+                      determined by the Free Application for Federal Student Aid
+                      (FAFSA) or other financial documentation.
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-lg font-medium">Academic Scholarships</div>
+                    <div class="text-sm text-slate-500">
+                      Specifically for students who have demonstrated
+                      outstanding academic achievements. These scholarships
+                      often require maintaining a certain GPA.
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-lg font-medium">Athletic Scholarships</div>
+                    <div class="text-sm text-slate-500">
+                      Given to students who demonstrate exceptional skill in
+                      sports. These scholarships often require students to
+                      participate in collegiate athletics.
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-lg font-medium">Artistic Scholarships</div>
+                    <div class="text-sm text-slate-500">
+                      For students with exceptional talent in artistic fields
+                      such as music, theater, dance, or visual arts. These
+                      scholarships often require a portfolio or audition.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr />
             </div>
           </div>
           <div class="lg:col-span-5">
+            <div class="flex gap-x-6 mb-6">
+              <div class="flex-grow flex items-center gap-x-2 p-6 border rounded-xl">
+                <img
+                  src="https://em-content.zobj.net/source/apple/391/sparkles_2728.png"
+                  class="w-10 h-10"
+                  alt=""
+                />
+                143 sessions
+              </div>
+              <div class="flex-grow flex items-center gap-x-2 p-6 border rounded-xl">
+                <img
+                  src="https://em-content.zobj.net/source/apple/391/dollar-banknote_1f4b5.png"
+                  class="w-10 h-10"
+                  alt=""
+                />
+                150 000 sum/hour
+              </div>
+            </div>
             <SideSections>
               <CardSection>
                 <Fragment slot="header">Session</Fragment>
-                <div class="px-1 flex flex-col gap-y-6" slot="body">
+                <div
+                  class="px-1 flex flex-col gap-y-6"
+                  slot="body"
+                  x-data="{modalIsOpen: false, bookIsOpen: false}">
                   <div>
                     <div class="text-slate-500 mb-2">
-                      Choose one of the days below to contact a mentor
+                      Book 1:1 sessions to suit your needs.
                     </div>
                     <div class="grid grid-cols-5 gap-x-4">
                       <DatePick id="1" day="THU" date="20 Jun" slots="4" />
                       <DatePick id="2" day="fri" date="21 Jun" slots="2" />
                       <DatePick id="3" day="Sat" date="22 Jun" slots="1" />
                       <DatePick id="4" day="SUN" date="23 Jun" slots="4" />
-                      <DatePick id="5" day="Mon" date="24 Jun" slots="3" />
+                      <button
+                        @click="modalIsOpen = true"
+                        class="flex flex-col gap-y-1 py-4 px-2 rounded-lg border text-center justify-center items-stretch text-sm font-semibold text-blue-600"
+                        >View all</button
+                      >
+                      <div
+                        x-cloak
+                        x-show="modalIsOpen"
+                        x-transition.opacity.duration.200ms
+                        x-trap.inert.noscroll="modalIsOpen"
+                        @keydown.esc.window="modalIsOpen = bookIsOpen = false"
+                        @click.self="modalIsOpen = bookIsOpen = false"
+                        class="fixed inset-0 z-30 flex items-end justify-center bg-black/50 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="defaultModalTitle">
+                        <!-- Modal Dialog -->
+                        <div
+                          x-show="modalIsOpen"
+                          x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity"
+                          x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100"
+                          x-transition:leave="transition ease-out duration-200 motion-reduce:transition-opacity"
+                          x-transition:leave-start="opacity-100"
+                          x-transition:leave-end="opacity-0"
+                          class="flex max-w-lg w-full flex-col overflow-hidden rounded-xl border border-slate-300 bg-white text-slate-700">
+                          <!-- Dialog Header -->
+                          <div
+                            class="flex items-center justify-between p-6 text-2xl">
+                            <h3
+                              id="defaultModalTitle"
+                              class="font-semibold tracking-wide text-black">
+                              Session
+                            </h3>
+                            <button
+                              @click="modalIsOpen = bookIsOpen = false"
+                              aria-label="close modal">
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <!-- Dialog Body -->
+                          <div class="px-6 relative">
+                            <div
+                              x-show="bookIsOpen"
+                              x-transition:enter="transition ease-out duration-500 motion-reduce:transition-opacity"
+                              x-transition:enter-start="opacity-0 translate-x-8"
+                              x-transition:enter-end="opacity-100 translate-x-0"
+                              x-transition:leave="transition ease-out motion-reduce:transition-opacity"
+                              x-transition:leave-start="opacity-100 translate-x-0"
+                              x-transition:leave-end="opacity-0 translate-x-8"
+                              class="flex flex-col gap-y-6 w-full flex-shrink-0">
+                              <FormControl labelText="Topic">
+                                <Select slot="formEl">
+                                  <option>Sample</option>
+                                  <option>Sample</option>
+                                  <option>Sample</option>
+                                  <option>Sample</option>
+                                </Select>
+                              </FormControl>
+
+                              <FormControl labelText="For additional questions">
+                                <TextArea
+                                  placeholder="Write your questions"
+                                  slot="formEl"
+                                />
+                              </FormControl>
+
+                              <FormControl labelText="Email or phone number">
+                                <Input
+                                  placeholder="Write your email or phone number"
+                                  slot="formEl"
+                                />
+                              </FormControl>
+                              <div class="flex gap-x-2">
+                                <div
+                                  class="flex-grow flex items-center text-sm gap-x-1">
+                                  <i
+                                    class="ti ti-calendar-event text-2xl leading-none text-slate-500"
+                                  ></i>
+                                  Thursday, 20 June
+                                </div>
+                                <div
+                                  class="flex-grow flex items-center text-sm gap-x-1">
+                                  <i
+                                    class="ti ti-clock text-2xl leading-none text-slate-500"
+                                  ></i>
+                                  19:30 (Tashkent time zone)
+                                </div>
+                                <button
+                                  @click="bookIsOpen = false"
+                                  class="bg-slate-100 hover:bg-slate-200 text-sm font-medium px-3 py-1 rounded">
+                                  <i class="ti ti-pencil"></i>
+                                </button>
+                              </div>
+                            </div>
+
+                            <div
+                              x-show="!bookIsOpen"
+                              x-transition:enter="transition ease-out duration-500 motion-reduce:transition-opacity"
+                              x-transition:enter-start="opacity-0 -translate-x-8 "
+                              x-transition:enter-end="opacity-100 translate-x-0"
+                              x-transition:leave="transition ease-out motion-reduce:transition-opacity"
+                              x-transition:leave-start="opacity-100 translate-x-0"
+                              x-transition:leave-end="opacity-0 -translate-x-8"
+                              class="flex flex-col gap-y-6 w-full flex-shrink-0">
+                              <div>
+                                <div class="flex items-center mb-2">
+                                  <button
+                                    class="hover:bg-slate-200 p-2 rounded-md transition inline-flex text-2xl leading-none opacity-0 invisible">
+                                    <i class="ti ti-chevron-left"></i>
+                                  </button>
+                                  <h5
+                                    class="text-lg font-medium flex-grow text-center">
+                                    June 2024
+                                  </h5>
+                                  <button
+                                    class="hover:bg-slate-200 p-2 rounded-md transition inline-flex text-2xl leading-none">
+                                    <i class="ti ti-chevron-right"></i>
+                                  </button>
+                                </div>
+                                <div
+                                  class="grid grid-cols-week justify-between mb-2">
+                                  <div
+                                    class="flex border border-transparent text-sm leading-8 font-medium">
+                                    <span class="text-slate-500 text-center w-8"
+                                      >M</span
+                                    >
+                                  </div>
+                                  <div
+                                    class="flex border border-transparent text-sm leading-8 font-medium">
+                                    <span class="text-slate-500 text-center w-8"
+                                      >T</span
+                                    >
+                                  </div>
+                                  <div
+                                    class="flex border border-transparent text-sm leading-8 font-medium">
+                                    <span class="text-slate-500 text-center w-8"
+                                      >W</span
+                                    >
+                                  </div>
+                                  <div
+                                    class="flex border border-transparent text-sm leading-8 font-medium">
+                                    <span class="text-slate-500 text-center w-8"
+                                      >T</span
+                                    >
+                                  </div>
+                                  <div
+                                    class="flex border border-transparent text-sm leading-8 font-medium">
+                                    <span class="text-slate-500 text-center w-8"
+                                      >F</span
+                                    >
+                                  </div>
+                                  <div
+                                    class="flex border border-transparent text-sm leading-8 font-medium">
+                                    <span class="text-slate-500 text-center w-8"
+                                      >S</span
+                                    >
+                                  </div>
+                                  <div
+                                    class="flex border border-transparent text-sm leading-8 font-medium">
+                                    <span class="text-slate-500 text-center w-8"
+                                      >S</span
+                                    >
+                                  </div>
+                                </div>
+                                <div
+                                  class="grid grid-cols-week justify-between gap-y-2">
+                                  <DateDay id="cal_01" date="01" />
+                                  <DateDay id="cal_02" date="02" disabled />
+                                  <DateDay id="cal_03" date="03" />
+                                  <DateDay id="cal_04" date="04" />
+                                  <DateDay id="cal_05" date="05" disabled />
+                                  <DateDay id="cal_06" date="06" />
+                                  <DateDay id="cal_07" date="07" />
+                                  <DateDay id="cal_08" date="08" />
+                                  <DateDay id="cal_09" date="09" />
+                                  <DateDay id="cal_10" date="10" disabled />
+                                  <DateDay id="cal_11" date="11" />
+                                  <DateDay id="cal_12" date="12" />
+                                  <DateDay id="cal_13" date="13" disabled />
+                                  <DateDay id="cal_14" date="14" disabled />
+                                  <DateDay id="cal_15" date="15" />
+                                  <DateDay id="cal_16" date="16" disabled />
+                                  <DateDay id="cal_17" date="17" />
+                                  <DateDay id="cal_18" date="18" disabled />
+                                  <DateDay id="cal_19" date="19" />
+                                  <DateDay id="cal_20" date="20" />
+                                  <DateDay id="cal_21" date="21" disabled />
+                                  <DateDay id="cal_22" date="22" />
+                                  <DateDay id="cal_23" date="23" disabled />
+                                  <DateDay id="cal_24" date="24" />
+                                  <DateDay id="cal_25" date="25" />
+                                  <DateDay id="cal_26" date="26" />
+                                  <DateDay id="cal_27" date="27" disabled />
+                                  <DateDay id="cal_28" date="28" />
+                                  <DateDay id="cal_29" date="29" />
+                                  <DateDay id="cal_30" date="30" disabled />
+                                  <DateDay id="cal_31" date="31" />
+                                </div>
+                              </div>
+                              <hr />
+                              <div>
+                                <div class="text-slate-500 mb-2">
+                                  Available time slots
+                                </div>
+                                <div class="grid grid-cols-4 gap-x-4">
+                                  <TimePick id="t_c_1" time="19:30 PM" />
+                                  <TimePick id="t_c_2" time="21:00 PM" />
+                                  <TimePick id="t_c_3" time="22:00 PM" />
+                                  <TimePick id="t_c_4" time="23:00 PM" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Dialog Footer -->
+                          <div class="flex justify-center gap-2 p-6">
+                            <div class="w-full" x-show="!bookIsOpen">
+                              <Button
+                                utils="w-full"
+                                attrs={{ "@click": "bookIsOpen = true" }}
+                                >Continue</Button
+                              >
+                            </div>
+                            <div class="w-full" x-show="bookIsOpen">
+                              <Button
+                                utils="w-full"
+                                attrs={{
+                                  "@click": "modalIsOpen = bookIsOpen = false",
+                                }}>Book Session</Button
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <hr />
@@ -170,49 +479,67 @@ import CourseCard from "../components/CourseCard.astro";
                       <TimePick id="t4" time="04:00 PM" />
                     </div>
                   </div>
-                  <hr />
-                  <div class="flex gap-x-4">
-                    <div class="flex-grow text-sm font-medium">
-                      Session cost
-                    </div>
-                    <div class="flex-grow text-sm font-medium text-end">
-                      150 000 sum/soat
-                    </div>
-                  </div>
-                  <hr />
-                  <FormControl labelText="Email or Phone number">
-                    <Input placeholder="Email or number" slot="formEl" />
-                  </FormControl>
-                  <FormControl labelText="For additional questions">
-                    <Input placeholder="Write your questions" slot="formEl" />
-                  </FormControl>
-                  <Button>Book Session</Button>
+                  <Button
+                    attrs={{ "@click": "modalIsOpen = bookIsOpen = true" }}
+                    >Book Session</Button
+                  >
                 </div>
               </CardSection>
             </SideSections>
           </div>
         </div>
+        <div class="mt-20">
+          <div class="flex flex-col gap-y-4">
+            <h2 class="text-2xl font-nosans font-semibold">Mentor’s courses</h2>
+            <div class="grid grid-cols-3 gap-x-6">
+              <CourseCard
+                title="Fundamentals of scholarship application writing"
+                grade="Bachelor"
+                countries={[us, de, sg, es]}
+                author={{ name: "Alexander James", img: guy1 }}
+                img={courseImg}
+                students="215"
+              />
+              <CourseCard
+                title="Global scholarship opportunities for higher education"
+                grade="Masters"
+                countries={[us, gb]}
+                author={{ name: "Victoria Harris", img: girl1 }}
+                img={vitoImg}
+                students="215"
+              />
+              <CourseCard
+                title="Navigating merit-based and need-based scholarships"
+                grade="Bachelor"
+                countries={[us, gb]}
+                author={{ name: "Michael Scott", img: guy2 }}
+                img={shiImg}
+                students="156"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
+  <style is:global>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer utilities {
+      *::-webkit-scrollbar {
+        @apply bg-transparent w-1;
+      }
+
+      *::-webkit-scrollbar-button {
+        @apply hidden;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        @apply bg-slate-200 rounded-lg;
+      }
+    }
+  </style>
 </Layout>
-
-<style is:global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  @layer utilities {
-    *::-webkit-scrollbar {
-      @apply bg-transparent w-1;
-    }
-
-    *::-webkit-scrollbar-button {
-      @apply hidden;
-    }
-
-    *::-webkit-scrollbar-thumb {
-      @apply bg-slate-200 rounded-lg;
-    }
-  }
-</style>

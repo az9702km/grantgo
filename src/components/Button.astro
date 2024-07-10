@@ -1,8 +1,9 @@
 ---
-const { utils } = Astro.props;
+const { utils, attrs } = Astro.props;
 ---
 
 <button
+  {...attrs && attrs}
   class:list={[
     utils,
     "bg-blue-500 hover:bg-blue-600 focus:ring-4 ring-blue-200 font-medium text-white flex justify-center px-4 py-2 rounded-lg items-baseline gap-2",

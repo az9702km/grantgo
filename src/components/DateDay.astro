@@ -1,0 +1,16 @@
+---
+const { id, date, disabled } = Astro.props;
+---
+
+<label
+  for={id}
+  class="flex border border-transparent text-sm leading-8 has-[:checked]:border-blue-500 has-[:disabled]:text-slate-400 font-medium cursor-pointer rounded-lg">
+  <span class="text-center w-8">{date}</span>
+  <input
+    type="radio"
+    name="date_day"
+    id={id}
+    class="hidden"
+    disabled={disabled}
+  />
+</label>
