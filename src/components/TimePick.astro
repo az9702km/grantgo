@@ -2,9 +2,11 @@
 const { id, time } = Astro.props;
 ---
 
-<label
-  for={id}
-  class="flex flex-col gap-y-1 p-2 rounded-lg border has-[:checked]:border-blue-500 text-center cursor-pointer">
-  <span class="text-sm font-semibold">{time}</span>
-  <input type="radio" name="time" id={id} class="hidden" />
-</label>
+<div class="relative">
+  <input type="radio" name="time" id={id} class="peer opacity-0" />
+  <label
+    for={id}
+    class="flex flex-col gap-y-1 p-2 rounded-lg ring-4 ring-transparent border peer-checked:border-blue-500 peer-focus:ring-blue-100 text-center cursor-pointer">
+    <span class="text-sm font-semibold">{time}</span>
+  </label>
+</div>

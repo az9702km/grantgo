@@ -25,105 +25,115 @@ import CourseCard from "../components/CourseCard.astro";
 
 <Layout title="Welcome to GrantGo.">
   <main>
-    <div class="container px-4 lg:px-0">
-      <section class="pb-32 pt-10">
-        <h1 class="text-primary text-5xl leading-normal font-semibold mb-3">
-          Our courses
-        </h1>
-        <div class="sticky top-16 z-50 bg-white left-0 right-0 mb-3">
-          <div class="flex gap-4 py-3 ps-1 overflow-auto">
-            <select
-              name=""
-              id=""
-              class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
-              <option value="">Country</option>
-              <option value="">Some option2 vfds</option>
-              <option value="">Some option</option>
-              <option value="">Some option</option>
-              <option value="">Some option </option>
-            </select>
-            <select
-              name=""
-              id=""
-              class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
-              <option value="">Degree</option>
-              <option value="">Some option2 vfds</option>
-              <option value="">Some option</option>
-              <option value="">Some option</option>
-              <option value="">Some option </option>
-            </select>
-            <select
-              name=""
-              id=""
-              class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
-              <option value="">Program</option>
-              <option value="">Some option2 vfds</option>
-              <option value="">Some option</option>
-              <option value="">Some option</option>
-              <option value="">Some option </option>
-            </select>
+    <div class="pb-32 pt-10">
+      <section>
+        <div class="container px-4 lg:px-0">
+          <h1 class="text-primary text-5xl leading-normal font-semibold mb-3">
+            Our courses
+          </h1>
+        </div>
+      </section>
+      <section class="sticky bg-white top-16 z-50">
+        <div class="container px-4 lg:px-0">
+          <div class="mb-3">
+            <div class="flex gap-4 py-3 ps-1 overflow-auto">
+              <select
+                name=""
+                id=""
+                class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
+                <option value="">Country</option>
+                <option value="">Some option2 cdsa cdsacdavfds</option>
+                <option value="">Some option</option>
+                <option value="">Some option</option>
+                <option value="">Some option </option>
+              </select>
+              <select
+                name=""
+                id=""
+                class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
+                <option value="">Degree</option>
+                <option value="">Some option2 vfds</option>
+                <option value="">Some option</option>
+                <option value="">Some option</option>
+                <option value="">Some option </option>
+              </select>
+              <select
+                name=""
+                id=""
+                class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
+                <option value="">Program</option>
+                <option value="">Some option2 vfds</option>
+                <option value="">Some option</option>
+                <option value="">Some option</option>
+                <option value="">Some option </option>
+              </select>
+            </div>
           </div>
         </div>
-        <div class="grid grid-cols-12 gap-6">
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Fundamentals of scholarship application writing"
-              grade="Bachelor"
-              countries={[us, de, sg, es]}
-              author={{ name: "Alexander James", img: guy1 }}
-              img={courseImg}
-              students="215"
-            />
-          </div>
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Global scholarship opportunities for higher education"
-              grade="Masters"
-              countries={[us, gb]}
-              author={{ name: "Victoria Harris", img: girl1 }}
-              img={vitoImg}
-              students="215"
-            />
-          </div>
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Navigating merit-based and need-based scholarships"
-              grade="Bachelor"
-              countries={[us, gb]}
-              author={{ name: "Michael Scott", img: guy2 }}
-              img={shiImg}
-              students="156"
-            />
-          </div>
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Developing a winning scholarship essay"
-              grade="Bachelor"
-              countries={[us, de, sg, es]}
-              author={{ name: "David Miller", img: guy3 }}
-              img={shepImg}
-              students="215"
-            />
-          </div>
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Maximizing financial aid and scholarship packages"
-              grade="Masters"
-              countries={[us, gb]}
-              author={{ name: "Anne Wilson", img: girl2 }}
-              img={teethImg}
-              students="215"
-            />
-          </div>
-          <div class="md:col-span-6 lg:col-span-4 col-span-12">
-            <CourseCard
-              title="Building a strong scholarship application portfolio"
-              grade="Bachelor"
-              countries={[us, es]}
-              author={{ name: "Jane Anderson", img: girl3 }}
-              img={updateImg}
-              students="156"
-            />
+      </section>
+      <section>
+        <div class="container px-4 lg:px-0">
+          <div class="grid grid-cols-12 gap-6">
+            <div class="md:col-span-6 lg:col-span-4 col-span-12">
+              <CourseCard
+                title="Fundamentals of scholarship application writing"
+                grade="Bachelor"
+                countries={[us, de, sg, es]}
+                author={{ name: "Alexander James", img: guy1 }}
+                img={courseImg}
+                students="215"
+              />
+            </div>
+            <div class="md:col-span-6 lg:col-span-4 col-span-12">
+              <CourseCard
+                title="Global scholarship opportunities for higher education"
+                grade="Masters"
+                countries={[us, gb]}
+                author={{ name: "Victoria Harris", img: girl1 }}
+                img={vitoImg}
+                students="215"
+              />
+            </div>
+            <div class="md:col-span-6 lg:col-span-4 col-span-12">
+              <CourseCard
+                title="Navigating merit-based and need-based scholarships"
+                grade="Bachelor"
+                countries={[us, gb]}
+                author={{ name: "Michael Scott", img: guy2 }}
+                img={shiImg}
+                students="156"
+              />
+            </div>
+            <div class="md:col-span-6 lg:col-span-4 col-span-12">
+              <CourseCard
+                title="Developing a winning scholarship essay"
+                grade="Bachelor"
+                countries={[us, de, sg, es]}
+                author={{ name: "David Miller", img: guy3 }}
+                img={shepImg}
+                students="215"
+              />
+            </div>
+            <div class="md:col-span-6 lg:col-span-4 col-span-12">
+              <CourseCard
+                title="Maximizing financial aid and scholarship packages"
+                grade="Masters"
+                countries={[us, gb]}
+                author={{ name: "Anne Wilson", img: girl2 }}
+                img={teethImg}
+                students="215"
+              />
+            </div>
+            <div class="md:col-span-6 lg:col-span-4 col-span-12">
+              <CourseCard
+                title="Building a strong scholarship application portfolio"
+                grade="Bachelor"
+                countries={[us, es]}
+                author={{ name: "Jane Anderson", img: girl3 }}
+                img={updateImg}
+                students="156"
+              />
+            </div>
           </div>
         </div>
       </section>

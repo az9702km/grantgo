@@ -69,19 +69,23 @@ import DateDay from "../components/DateDay.astro";
         <div class="grid grid-cols-12 gap-6">
           <div class="lg:col-span-7">
             <div class="flex flex-col gap-y-10">
-              <div class="flex flex-col">
+              <div class="flex flex-col" x-data="{showMore : false}">
                 <h2 class="font-nosans text-2xl font-semibold mb-2">
                   About me
                 </h2>
-                <p class="line-clamp-2 mb-2">
+                <p :class="showMore ? '' : 'line-clamp-2'">
                   Alexander James an MBA from Harvard Business School and began
                   his career in management consulting with XYZ Consulting. He
                   quickly realized his passion for entrepreneurship and founded
                   his first company.
                 </p>
                 <button
+                  @click="showMore = ! showMore"
                   class="text-blue-500 inline-flex items-center text-sm leading-6 font-semibold self-start"
-                  >Show more <i class="ti ti-chevron-down text-xl"></i></button
+                  >Show more <i
+                    class="ti text-xl"
+                    :class="showMore ? 'ti-chevron-up' : 'ti-chevron-down'"
+                  ></i></button
                 >
               </div>
               <hr />
@@ -200,7 +204,8 @@ import DateDay from "../components/DateDay.astro";
           </div>
           <div class="lg:col-span-5">
             <div class="flex gap-x-6 mb-6">
-              <div class="flex-grow flex items-center gap-x-2 p-6 border rounded-xl">
+              <div
+                class="flex-grow flex items-center gap-x-2 p-6 border rounded-xl">
                 <img
                   src="https://em-content.zobj.net/source/apple/391/sparkles_2728.png"
                   class="w-10 h-10"
@@ -208,7 +213,8 @@ import DateDay from "../components/DateDay.astro";
                 />
                 143 sessions
               </div>
-              <div class="flex-grow flex items-center gap-x-2 p-6 border rounded-xl">
+              <div
+                class="flex-grow flex items-center gap-x-2 p-6 border rounded-xl">
                 <img
                   src="https://em-content.zobj.net/source/apple/391/dollar-banknote_1f4b5.png"
                   class="w-10 h-10"

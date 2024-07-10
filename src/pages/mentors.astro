@@ -28,69 +28,79 @@ import MentorCard from "../components/MentorCard.astro";
 
 <Layout title="Mentors.">
   <main>
-    <div class="container px-4 md:px-0">
-      <section class="pb-32 pt-10">
-        <h1 class="text-primary text-5xl leading-normal font-semibold mb-3">
-          Mentors
-        </h1>
-        <div class="sticky top-16 z-50 bg-white left-0 right-0 mb-3">
-          <div class="flex gap-4 py-3 ps-1 overflow-auto">
-            <select
-              name=""
-              id=""
-              class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
-              <option value="">Country</option>
-              <option value="">Some option2 vfds</option>
-              <option value="">Some option</option>
-              <option value="">Some option</option>
-              <option value="">Some option </option>
-            </select>
-            <select
-              name=""
-              id=""
-              class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
-              <option value="">Degree</option>
-              <option value="">Some option2 vfds</option>
-              <option value="">Some option</option>
-              <option value="">Some option</option>
-              <option value="">Some option </option>
-            </select>
-            <select
-              name=""
-              id=""
-              class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
-              <option value="">Program</option>
-              <option value="">Some option2 vfds</option>
-              <option value="">Some option</option>
-              <option value="">Some option</option>
-              <option value="">Some option </option>
-            </select>
+    <div class="pb-32 pt-10">
+      <section>
+        <div class="container px-4 md:px-0">
+          <h1 class="text-primary text-5xl leading-normal font-semibold mb-3">
+            Mentors
+          </h1>
+        </div>
+      </section>
+      <section class="sticky top-16 z-50 bg-white">
+        <div class="container px-4 md:px-0">
+          <div class="mb-3">
+            <div class="flex gap-4 py-3 ps-1 overflow-auto">
+              <select
+                name=""
+                id=""
+                class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
+                <option value="">Country</option>
+                <option value="">Some option2 vfds</option>
+                <option value="">Some option</option>
+                <option value="">Some option</option>
+                <option value="">Some option </option>
+              </select>
+              <select
+                name=""
+                id=""
+                class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
+                <option value="">Degree</option>
+                <option value="">Some option2 vfds</option>
+                <option value="">Some option</option>
+                <option value="">Some option</option>
+                <option value="">Some option </option>
+              </select>
+              <select
+                name=""
+                id=""
+                class="text-sm py-2.5 border rounded-lg border-slate-300 pl-3 text-slate-500 form-select">
+                <option value="">Program</option>
+                <option value="">Some option2 vfds</option>
+                <option value="">Some option</option>
+                <option value="">Some option</option>
+                <option value="">Some option </option>
+              </select>
+            </div>
           </div>
         </div>
-        <div class="grid grid-cols-12 gap-6">
-          <div class="md:col-span-3 col-span-12">
-            <MentorCard id="1" img={guy1} name="Alexander James" />
-          </div>
-          <div class="md:col-span-3 col-span-12">
-            <MentorCard id="2" img={guy3} name="David Miller" />
-          </div>
-          <div class="md:col-span-3 col-span-12">
-            <MentorCard id="3" img={girl2} name="Anne Wilson" />
-          </div>
-          <div class="md:col-span-3 col-span-12">
-            <MentorCard id="4" img={girl3} name="Anne Wilson" />
-          </div>
-          <div class="md:col-span-3 col-span-12">
-            <MentorCard id="5" img={guy1} name="Alexander James" />
-          </div>
-          <div class="md:col-span-3 col-span-12">
-            <MentorCard id="6" img={guy3} name="David Miller" />
-          </div>
-          <div class="md:col-span-3 col-span-12">
-            <MentorCard id="7" img={girl2} name="Anne Wilson" />
-          </div>
-          <div class="md:col-span-3 col-span-12">
-            <MentorCard id="8" img={girl3} name="Anne Wilson" />
+      </section>
+      <section>
+        <div class="container px-4 md:px-0">
+          <div class="grid grid-cols-12 gap-6">
+            <div class="md:col-span-3 col-span-12">
+              <MentorCard id="1" img={guy1} name="Alexander James" />
+            </div>
+            <div class="md:col-span-3 col-span-12">
+              <MentorCard id="2" img={guy3} name="David Miller" />
+            </div>
+            <div class="md:col-span-3 col-span-12">
+              <MentorCard id="3" img={girl2} name="Anne Wilson" />
+            </div>
+            <div class="md:col-span-3 col-span-12">
+              <MentorCard id="4" img={girl3} name="Anne Wilson" />
+            </div>
+            <div class="md:col-span-3 col-span-12">
+              <MentorCard id="5" img={guy1} name="Alexander James" />
+            </div>
+            <div class="md:col-span-3 col-span-12">
+              <MentorCard id="6" img={guy3} name="David Miller" />
+            </div>
+            <div class="md:col-span-3 col-span-12">
+              <MentorCard id="7" img={girl2} name="Anne Wilson" />
+            </div>
+            <div class="md:col-span-3 col-span-12">
+              <MentorCard id="8" img={girl3} name="Anne Wilson" />
+            </div>
           </div>
         </div>
       </section>

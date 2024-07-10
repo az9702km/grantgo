@@ -2,15 +2,22 @@
 const { id, date, day, slots } = Astro.props;
 ---
 
-<label
-  for={id}
-  class="flex flex-col gap-y-1 py-4 px-2 rounded-lg border has-[:checked]:border-blue-500 text-center cursor-pointer">
-  <span class="text-xs font-medium text-slate-500 uppercase">{day}</span>
-  <span class="text-sm font-semibold">{date}</span>
-  <span
-    class="text-xs font-medium"
-    class:list={[slots > 1 ? "text-green-500" : "text-red-500"]}
-    >{slots} slots</span
-  >
-  <input type="radio" name="date" id={id} class="hidden" />
-</label>
+<div class="relative">
+  <input
+    type="radio"
+    name="date"
+    id={id}
+    class="peer absolute top-0 left-0 opacity-0"
+  />
+  <label
+    for={id}
+    class="flex flex-col gap-y-1 py-4 px-2 rounded-lg border ring-4 ring-transparent peer-checked:border-blue-500 peer-focus:ring-blue-100 text-center cursor-pointer">
+    <span class="text-xs font-medium text-slate-500 uppercase">{day}</span>
+    <span class="text-sm font-semibold">{date}</span>
+    <span
+      class="text-xs font-medium"
+      class:list={[slots > 1 ? "text-green-500" : "text-red-500"]}
+      >{slots} slots</span
+    >
+  </label>
+</div>
